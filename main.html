@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: antiquewhite;">
+    <h1 style="text-align: center; color: coral;">LETS FORM SOME PARAGRAPHS!!</h1><br>
+    <div style="place-items: left; float: left;margin-left: 500px;">
+        <h3 style="text-align: center; color: coral;">Paragraph 1</h3>
+        <ol >
+            <li>
+                <div style="float: left;">
+                    <input id="cl1" type="text" placeholder="Sentence">
+                </div>
+                
+            </li>
+            <br>
+            <li>
+                <div style="float: left;">
+                    <input id="cl2" type="text" placeholder="Sentence">
+                </div>
+                
+            </li>
+            <br>
+            <li>
+                <div style="float: left;">
+                    <input id="cl3" type="text" placeholder="Sentence">
+                </div>
+                
+            </li>
+            <br>
+            <li>
+                <div style="float: left;">
+                    <input id="cl4" type="text" placeholder="Sentence">
+                </div>
+                
+            </li>
+        </ol>
+    </div>
+    <div style="place-items: right; float: right; margin-right: 500px;">
+        <h3 style="text-align: center; color: coral;">Paragraph 2</h3>
+        <ol >
+            <li>
+                <div style="float: left;">
+                    <input id="cli1" type="text" placeholder="Sentence">
+                </div>
+                
+            </li>
+            <br>
+            <li>
+                <div style="float: left;">
+                    <input id="cli2" type="text" placeholder="Sentence">
+                </div>
+                
+            </li>
+            <br>
+            <li>
+                <div style="float: left;">
+                    <input id="cli3" type="text" placeholder="Sentence">
+                </div>
+                
+            </li>
+            <br>
+            <li>
+                <div style="float: left;">
+                    <input id="cli4" type="text" placeholder="Sentence">
+                </div>
+                
+            </li>
+        </ol>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <button id="but1" onclick="clicky1()" style="display: block; margin: auto;"> Submit Paragraph 1</button>
+    <button id="but2" onclick="clicky2()" style="display: block; margin: auto;"> Submit Paragraph 2</button>
+    <br><br>
+    <p id="p1"></p><br>
+    <p id="p2"></p>
+</body>
+<script>
+    function clicky1() {
+        para1 = []
+        for (i = 1; i <= 4; i++) {
+            console.log(document.getElementById('cl' + i).value)
+            para1.push(document.getElementById('cl' + i).value)
+        }
+        document.getElementById('p1').innerHTML = para1.join(".")
+    }
+    function clicky2() {
+        para2 = []
+        for (k = 1; k <= 4; k++) {
+            console.log(document.getElementById('cli' + k).value)
+            para2.push(document.getElementById('cli' + k).value)
+        }
+        document.getElementById('p2').innerHTML = para2.join(".")
+    }
+</script>
+</html>
